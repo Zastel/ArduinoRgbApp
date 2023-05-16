@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoRgbApp.Core", "src\ArduinoRgbApp.Core\ArduinoRgbApp.Core.csproj", "{1607385D-CCF5-4A53-BA2F-4FAA4DB06F7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoRgbApp.macOS", "ArduinoRgbApp.macOS\ArduinoRgbApp.macOS.csproj", "{D2F35413-B099-4974-ACAC-3C4CF68CC72B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoRgbApp.macOS", "src\ArduinoRgbApp.macOS\ArduinoRgbApp.macOS.csproj", "{D2F35413-B099-4974-ACAC-3C4CF68CC72B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
