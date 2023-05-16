@@ -4,6 +4,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoRgbApp.Core", "src\A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoRgbApp.macOS", "src\ArduinoRgbApp.macOS\ArduinoRgbApp.macOS.csproj", "{D2F35413-B099-4974-ACAC-3C4CF68CC72B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{30BC6662-D9F0-42D6-96E5-88408ACFD713}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{2BCF1A19-0EEB-4D85-ADE4-F620F3D52913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoRgbApp.Core.Tests", "ArduinoRgbApp.Core.Tests\ArduinoRgbApp.Core.Tests.csproj", "{80B545A5-472F-468C-A290-04B619C72C36}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,14 @@ Global
 		{D2F35413-B099-4974-ACAC-3C4CF68CC72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2F35413-B099-4974-ACAC-3C4CF68CC72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2F35413-B099-4974-ACAC-3C4CF68CC72B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80B545A5-472F-468C-A290-04B619C72C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B545A5-472F-468C-A290-04B619C72C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B545A5-472F-468C-A290-04B619C72C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B545A5-472F-468C-A290-04B619C72C36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1607385D-CCF5-4A53-BA2F-4FAA4DB06F7A} = {30BC6662-D9F0-42D6-96E5-88408ACFD713}
+		{D2F35413-B099-4974-ACAC-3C4CF68CC72B} = {30BC6662-D9F0-42D6-96E5-88408ACFD713}
+		{80B545A5-472F-468C-A290-04B619C72C36} = {2BCF1A19-0EEB-4D85-ADE4-F620F3D52913}
 	EndGlobalSection
 EndGlobal
