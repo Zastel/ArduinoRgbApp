@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoRgbApp.Core", "src\ArduinoRgbApp.Core\ArduinoRgbApp.Core.csproj", "{1607385D-CCF5-4A53-BA2F-4FAA4DB06F7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArduinoRgbApp.MacOS", "src\ArduinoRgbApp.MacOS\ArduinoRgbApp.MacOS.csproj", "{F5FFA2C2-D3D9-42D5-842A-72F0BD200BCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1607385D-CCF5-4A53-BA2F-4FAA4DB06F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1607385D-CCF5-4A53-BA2F-4FAA4DB06F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1607385D-CCF5-4A53-BA2F-4FAA4DB06F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1607385D-CCF5-4A53-BA2F-4FAA4DB06F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5FFA2C2-D3D9-42D5-842A-72F0BD200BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FFA2C2-D3D9-42D5-842A-72F0BD200BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FFA2C2-D3D9-42D5-842A-72F0BD200BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FFA2C2-D3D9-42D5-842A-72F0BD200BCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
