@@ -6,4 +6,10 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="ReactiveUI" Version="18.4.44" />
+      <PackageReference Include="ReactiveUI.Fody" Version="18.4.44" />
+      <PackageReference Include="System.IO.Ports" Version="7.0.0" />
+    </ItemGroup>
+
 </Project>
