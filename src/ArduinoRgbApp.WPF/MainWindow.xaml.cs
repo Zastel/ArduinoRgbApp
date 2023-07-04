@@ -1,18 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO.Ports;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO.Ports;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using ArduinoRgbApp.WPF.Helpers.Communication;
 
 namespace ArduinoRgbApp.WPF
@@ -22,7 +10,7 @@ namespace ArduinoRgbApp.WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        private SerialHelper _serial;
+        private SerialHelper? _serial;
 
         public MainWindow()
         {
@@ -31,16 +19,30 @@ namespace ArduinoRgbApp.WPF
 
         private void ConnectButtonClick(object sender, RoutedEventArgs e)
         {
-            _serial.Connect();
-            ConnectSerialButton.Visibility = Visibility.Hidden;
-            DisconnectSerialButton.Visibility = Visibility.Visible;
+            if (_serial != null)
+            {
+                _serial.Connect();
+                ConnectSerialButton.Visibility = Visibility.Hidden;
+                DisconnectSerialButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                MessageBox.Show("No serial port connected. Please connect one and try again.");
+            }
         }
 
         private void DisconnectButtonClick(object sender, RoutedEventArgs e)
         {
-            _serial.Disconnect();
-            ConnectSerialButton.Visibility = Visibility.Visible;
-            DisconnectSerialButton.Visibility = Visibility.Hidden;
+            if (_serial != null)
+            {
+                _serial.Disconnect();
+                ConnectSerialButton.Visibility = Visibility.Visible;
+                DisconnectSerialButton.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                MessageBox.Show("No serial port connected. Please connect one and try again.");
+            }
         }
 
         private void RefreshButtonClick(object sender, RoutedEventArgs e)
@@ -50,20 +52,41 @@ namespace ArduinoRgbApp.WPF
 
         private void ColorButtonClick(object sender, RoutedEventArgs e)
         {
-            var red = (int)RedSlider.Value;
-            var green = (int)GreenSlider.Value;
-            var blue = (int)BlueSlider.Value;
-            _serial.ApplyStaticColor(red,green,blue);
+            if (_serial != null)
+            {
+                var red = (int)RedSlider.Value;
+                var green = (int)GreenSlider.Value;
+                var blue = (int)BlueSlider.Value;
+                _serial.ApplyStaticColor(red,green,blue);
+            }
+            else
+            {
+                MessageBox.Show("No serial port connected. Please connect one and try again.");
+            }
         }
 
         private void RainbowButtonClick(object sender, RoutedEventArgs e)
         {
-            _serial.RainbowMode();
+            if (_serial != null)
+            {
+                _serial.RainbowMode();
+            }
+            else
+            {
+                MessageBox.Show("No serial port connected. Please connect one and try again.");
+            }
         }
 
         private void WrgbButtonClick(object sender, RoutedEventArgs e)
         {
-            _serial.DefaultMode();
+            if (_serial != null)
+            {
+                _serial.DefaultMode();
+            }
+            else
+            {
+                MessageBox.Show("No serial port connected. Please connect one and try again.");
+            }
         }
 
         private void SliderRed_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
